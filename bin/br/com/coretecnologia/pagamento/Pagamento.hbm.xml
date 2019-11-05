@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 06/10/2019 11:39:00 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="br.com.coretecnologia.pagamento.Pagamento" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="PAGAMENTO">
+        <composite-id class="br.com.coretecnologia.pagamento.PagamentoId" mapped="false" name="id" unsaved-value="undefined">
+            <key-property name="cpf" type="long">
+                <column name="CPF" precision="22" scale="0"/>
+            </key-property>
+            <key-property name="cdcurso" type="long">
+                <column name="CDCURSO" precision="22" scale="0"/>
+            </key-property>
+        </composite-id>
+        <property generated="never" lazy="false" name="datainscricao" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="DATAINSCRICAO" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
